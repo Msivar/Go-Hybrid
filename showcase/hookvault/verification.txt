@@ -1,0 +1,18 @@
+23 November 2026
+Platform: Windows; Python 3.12.14.
+
+Command: python -B -m unittest -v
+Result: 17 tests, 0 failures, 0 errors. Runtime 1.314 seconds.
+The sandbox initially denied loopback client sockets (WinError 10013).
+The same suite passed with permission for local-only HTTP tests.
+
+Command: python -B demo.py
+First delivery: HTTP 201, created.
+Same delivery retried: HTTP 200, duplicate.
+Same ID with another payload: HTTP 409, conflict.
+Worker received the original payload; acknowledgement returned True.
+Persisted event status: done.
+
+All HTTP validation used temporary servers on 127.0.0.1.
+No live payment, CRM or customer system integration has been tested.
+No independent security review or production load benchmark is claimed.
